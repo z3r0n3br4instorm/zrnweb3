@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zerone Tech Operating System</title>
+  <style>
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000; /* Adjust the background color as needed */
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #03e9f4; /* Adjust the color as needed */
+  border-radius: 6px; /* Adjust the radius as needed */
+  border: 3px solid #000000; /* Adjust the border color and size as needed */
+}
+
+/* Add glow effect to the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #03e9f4; /* Adjust the color as needed */
+  box-shadow: 0 0 10px #03e9f4; /* Adjust the glow color and size as needed */
+}
+
+    @font-face {
+  font-family: 'SonySketch';
+  src: url('font_default.ttf') format('truetype');
+  font-weight:10 ;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight:10 ;
+}
+@media only screen and (max-width: 400px) {
+      button {
+        padding: 100px 100px;
+      }
+    }
+
+    /* Adjust text size for mobile */
+    @media only screen and (max-width: 400px) {
+      h1, h2, p {
+        font-size: 36px;
+      }
+    }
+@keyframes slideU {
+      0% {
+        transform: translateY(0%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(100);
+        opacity: 1;
+      }
+    }
+    body {
+      background-size: cover;
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(30px);
+      margin: 0;
+      padding: 0;
+      font-family: "Space Grotesk", Arial, sans-serif;
+      font-weight: 100;
+      background-image: url("assets/images/zrn_back.png");
+      background-color: rgba(0, 0, 0, 0.5);
+      background-position: center;
+      background-attachment: fixed;
+      animation: slideU 2s ease;
+      color: rgba(0, 0, 0, 0); /* Adjust the opacity as per your preference */
+      text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.411); 
+    }
+
+
+    .top-bar {
+      background-color: rgba(0, 0, 0, 0.747); /* Adjust the background color and transparency as desired */
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      animation: slideUp 1s ease;
+      border-bottom: 2px solid #fff;
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .top-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(10px); /* Apply the blur effect to the pseudo-element */
+      -webkit-backdrop-filter: blur(10px); /* For Safari support */
+      z-index: -1;
+    }
+
+
+    /* Add a margin to the content below the top bar */
+    .content {
+      margin-top: 50px; /* Adjust the margin as per your top bar height */
+    }
+
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .logo {
+      height: 40px;
+      margin-right: 40px;
+    }
+    .logo img {
+      margin: -25px 40px;
+      height: 150%;
+    }
+    @keyframes animate1 {
+      0% {
+        left: -100%;
+      }
+      50%,
+      100% {
+        left: 100%;
+      }
+    }
+
+    .button_3 {
+      font-size: 16px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      padding: 13px 20px 13px;
+      outline: 0;
+      border: 1px solid rgba(255, 255, 255, 0.507);
+      cursor: pointer;
+      color :rgb(168, 168, 168);
+      font-family:"Space Grotesk", Arial, sans-serif ;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button_3:after {
+      content: "";
+      background-color: #5c5c5c71;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 7px;
+      left: 7px;
+      transition: 0.2s;
+    }
+
+    .button_3:hover:after {
+      top: 0px;
+      left: 0px;
+    }
+
+    @media (min-width: 768px) {
+      .button_3 {
+        padding: 13px 50px 13px;
+      }
+    }
+    @keyframes animate1 {
+      0% {
+        left: -100%;
+      }
+      50%,
+      100% {
+        left: 100%;
+      }
+    }
+    h1 {
+      text-align: center;
+      font-weight: 100;
+      font-size: smaller;
+      margin: 40px 0;
+      animation: slideUp 1s ease;
+    }
+    .vertical-line {
+    width: 2px;
+    height: 100px; /* Adjust the height as needed */
+    background-color: rgb(168, 168, 168); /* Change the color if desired */
+    }
+    .button-image {
+      width: 500px; /* Adjust the width as needed */
+      height: 500px; /* Adjust the height as needed */
+      margin-left: 10px; /* Adjust the margin as needed */
+      vertical-align: middle;
+      margin-left: auto;
+    }
+    h2 {
+      text-align: left;
+      font-family: "Space Grotesk", Arial, sans-serif;
+      font-weight: lighter;
+      margin: 40px 20px;
+      animation: slideUp 1s ease;
+    }
+    h3 {
+      text-align: center;
+      margin: 40px 0;
+      font-weight: 100;
+      font-size: xx-large;
+      animation: slideUp 1s ease;
+    }
+    p {
+      text-align: center;
+      font-family: "Space Grotesk", Arial, sans-serif;
+      font-weight: lighter;
+      margin: 40px 20px;
+      animation: slideUp 1s ease;
+    }
+    .line {
+      border: none;
+      border-top: 2px solid rgba(255, 255, 255, 0.404); /* Dark white color */
+    }
+    @media only screen and (max-width: 400px) {
+      button {
+        padding: 100px 100px;
+      }
+    }
+    .image-viewer {
+        position: relative;
+        width: 100%;
+        height: auto;
+        }
+
+        .image-viewer img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        }
+
+    /* Adjust text size for mobile */
+    @media only screen and (max-width: 400px) {
+      h1, h2, p {
+        font-size: 36px;
+      }
+    }
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-gallery img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+        margin: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.1);
+    }
+
+    .fullscreen {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fullscreen img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .video-gallery {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .video-item {
+      width: 500px;
+      height: 600px;
+      margin: 10px;
+      /* overflow: hidden; */
+      position: relative;
+      
+    }
+
+    .video-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .video-item:hover::after {
+      content: '\f144';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 36px;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .video-item:hover::before {
+      content: "";
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .video-item:hover::before,
+    .video-item:hover::after {
+      opacity: 1;
+    }
+
+    .video-fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 9999;
+      display: none;
+    }
+
+    .video-fullscreen video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Space+Mono&display=swap">
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    window.addEventListener('load', scrollToTop);
+    function expandImage(element) {
+        var fullscreen = document.createElement('div');
+        fullscreen.classList.add('fullscreen');
+
+        var image = document.createElement('img');
+        image.src = element.src;
+
+        fullscreen.appendChild(image);
+        document.body.appendChild(fullscreen);
+
+        fullscreen.onclick = function () {
+        document.body.removeChild(fullscreen);
+        };
+    }
+    const galleryItems = document.querySelectorAll('.video-item');
+    const fullscreenContainer = document.querySelector('.video-fullscreen');
+    const fullscreenVideo = fullscreenContainer.querySelector('video');
+
+    galleryItems.forEach(item => {
+      const video = item.querySelector('video');
+
+      item.addEventListener('click', () => {
+        fullscreenVideo.src = video.src;
+        fullscreenContainer.style.display = 'flex';
+        fullscreenVideo.play();
+      });
+    });
+
+    fullscreenContainer.addEventListener('click', () => {
+      fullscreenContainer.style.display = 'none';
+      fullscreenVideo.pause();
+    });
+    function redirect_tele() {
+      // Replace "newpage.html" with the URL of the page you want to redirect to
+      window.location.href = "https://t.me/zt_grp";
+    }
+    function redirect_old() {
+      // Replace "newpage.html" with the URL of the page you want to redirect to
+      window.location.href = "https://zerone-web.web.app";
+    }
+  </script>
+</head>
+<body>
+  <div class="top-bar" style="justify-content: flex-start;">
+    <div class="logo">
+      <img src="assets/images/zrn-wide.png" alt="Logo">
+    </div>
+    <!-- <button class="button">Button 1</button> -->
+    <!-- <button class="button">Button 2</button> -->
+    <button class="button_3" style="margin-left: auto;" onclick="redirect_old()">Home</button>
+    <button class="button_3" onclick="redirect_tele()">Join The Lab 🗺️</button>
+  </div>
+    <h3>z t O S - P R O J E C T</h3>
+    <h1>Zerone Technologies Operating System 2.0</h1>
+    <hr class="line">
+    <h3>Download Still Unavailable ! Coming Soon...</h3>
+    <hr class="line">
+    <p>
+        ztOS 2.0 is here, and it's a major upgrade from the previous versions.<br>It's an operating system (like Windows or macOS), but it's based on Debian, which means it's stable and reliable.<br>
+        
+        What makes ztOS 2.0 special:<br>
+        <hr class="line">
+        <h3>Easy-to-Use Tools:</h3><br>-ztOS 2.0 comes with special tools that make it easy to control your computer.<br> There's a cool Heads Up Display to help you navigate, and a Hardware Monitoring System to keep an eye on your computer's health.
+        <hr class="line">
+        <h3>ztOS Core:</h3><br>-This is the backbone of ztOS 2.0. It makes sure everything runs smoothly and securely.
+        <hr class="line">
+        <h3>Lots of Software:</h3><br>-ztOS 2.0 isn't just an operating system; it's a whole package.<br> It includes lots of useful software, so you can do everything you need to do on your computer without searching for extra programs.
+        <hr class="line">
+        <h3>Windows Software Support:</h3><br>-You can run Windows programs too on this with 'WINE'. Its a translation layer to run windows programs without virtualizing.<br>
+    </p>
+        <!-- <h3>Whether you're a computer expert or just starting out, ztOS 2.0 has something for you.<br> It's a reliable and upgraded operating system that's ready for whatever you want to do on your computer. Welcome to a smarter way to use your computer with ztOS 2.0. </h3> -->
+    <hr class="line">
+    <div class="image-gallery">
+        <a href="ztOS/1.png" target="_blank">
+            <img src="ztOS/1.png" alt="Image">
+          </a>          
+          <a href="ztOS/2.png" target="_blank">
+            <img src="ztOS/2.png" alt="Image">
+          </a>
+          <a href="ztOS/3.png" target="_blank">
+            <img src="ztOS/3.png" alt="Image">
+          </a>
+          <a href="ztOS/4.png" target="_blank">
+            <img src="ztOS/4.png" alt="Image">
+          </a>
+          <a href="ztOS/5.png" target="_blank">
+            <img src="ztOS/5.png" alt="Image">
+          </a>
+          <a href="ztOS/6.png" target="_blank">
+            <img src="ztOS/6.png" alt="Image">
+          </a>
+                                        
+
+    </div>
+      
+      
+    <!-- <div style="display: flex; justify-content: center;">
+      <button class="button" style="margin: 40px 20px;" onclick="redirect_rige()">./check_out<br>//rigel_engine</button>
+      <button class="button" style="margin: 40px 20px;" onclick="redirect_git()">./visit_me_on<br>_github</button>
+      <button class="button_2" style="margin: 40px 20px;" onclick="redirect_ictfrom()">./ictfromabc's<br>/downloads</button>
+    </div>     -->
+
+  </body>
+</html>
+ 
