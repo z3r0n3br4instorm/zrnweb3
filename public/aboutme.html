@@ -74,7 +74,44 @@
       text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.411); 
     }
 
+    .image-viewer {
+        position: relative;
+        width: 100%;
+        height: auto;
+        }
 
+        .image-viewer img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        }
+
+    /* Adjust text size for mobile */
+    @media only screen and (max-width: 400px) {
+      h1, h2, p {
+        font-size: 36px;
+      }
+    }
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-gallery img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+        margin: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.1);
+    }
     .top-bar {
       background-color: rgb(0, 0, 0); /* Adjust the background color and transparency as desired */
       color: #fff;
@@ -284,10 +321,6 @@
       // Replace "newpage.html" with the URL of the page you want to redirect to
       window.location.href = "https://zerone-web.web.app/redirect_meme.html";
     }
-    function redirect_readme() {
-      // Replace "newpage.html" with the URL of the page you want to redirect to
-      window.location.href = "https://zerone-web.web.app/aboutme.html";
-    }
     window.addEventListener('load', scrollToTop);
   </script>
 </head>
@@ -301,40 +334,43 @@
     <button class="button-86" style="margin-left: auto;" onclick="redirect_old()">Redirect to old website</button>
     <button class="button-86" onclick="redirect_tele()">Join The Lab 🗺️</button>
   </div>
-    <h1>Zerone web - 3.0</h1>
-    <p>Notes : <br>Webpage's mobile support isn't developed yet! Use a Desktop Web browser for the best experience...</p>
-    <p>The RigelAI Web is a project that I developed when I was 16, so apologies for the bad UI.</p>
+    <h1>Hey there, it's your friendly neighborhood tech enthusiast - Ometh Abeyrathne  :)</h1>
+
+    <h2>I'm a self-taught coder who thrives on the thrill of breaking things, fixing them, and sometimes building something entirely new. It's like my version of digital LEGO!<br><br>
+      
+      When I'm not diving into lines of code, I'm all about expanding my knowledge horizon. Learning is my jam, and I'll take a bite out of any new tech challenge that comes my way. And you know what's really cool? I've got a collection of my handiwork down below. Yep, I like to tinker with old electronics and bring 'em back to life.<br><br>
+      
+      I'm not a fan of following the herd... I'd rather invent my own path, create my own thing, and, well, just be me. That's why I started Zerone Laboratories, where I get to channel my inner mad scientist. Experimentation is my middle name, and innovation is my game!<br><br>
+      
+      Right now, I'm fluent in Python and C, but I'm on a wild ride learning languages like C++, Java, and even CUDA. Oh, and let me brag a little, I whipped up a perceptron in C all by myself when I was just 17. No manuals, just me and my coding mojo!<br><br>
+
+      In the midst of this exciting journey through the realms of technology and innovation, I find myself driven by a singular purpose – to change the world before I die. Doing something different is my only dream, and that would be the thing I'll be most content with on my deathbed.<br><br>
+      
+      Despite some bumps on the math road (Advanced Level Mathematics, I'm looking at you), I'm a bona fide fan of all things math and physics. So, if you're into tech, innovation, and a bit of offbeat charm, you've come to the right place. Let's ride the wave of creativity and exploration together! 🚀🤖🔬</h2>
     <hr class="line">
-    <div style="display: flex; justify-content: center;">
-      <br><button class="button-86" style="margin: 40px 20px;" onclick="redirect_rige()">./check_out<br>--rigel_engine</button>
-      <button class="button-86" style="margin: 40px 20px;" onclick="redirect_git()">./visit_me_on<br>_github</button>
-      <button class="button-86" style="margin: 40px 20px;" onclick="redirect_ictfrom()">./ictfromabc's<br>>>>downloads</button>
-    </div>    
-  <hr class="line">
-  <h2>z t O S Upsilon Version 2.0 | ZRNLBS_OS_2.0 | PROTOTYPE</h2>
-  <div style="display: flex; justify-content: center;">
-  <button class="button-86" style="margin: 40px 20px;" onclick="redirect_ztos_down()">./download_os[unavailable]</button>
-  <button class="button-86" style="margin: 40px 20px;" onclick="redirect_ztos_down()">./more_info</button></div>
-  <hr class="line">
-  <h2>S T A R G A T E - AKA Central Computer Mark 1</h2>
-  <div><p style="text-align: left;">Zerone Technologies Central Computer, or the Stargate Mark 1, was my personal project. It served as a central computer, media server, web server, and controlled household hardware like fans, TVs, and lights. Running on ztOS 1.3 Upslion, it featured custom software applications I developed for enhanced functionality and usability. Learn more about Stargate Mark 1...<p></div>
-  <div style="display: flex; justify-content: right;">
-  <button class="button-86" style="margin: 40px 20px;" onclick="redirect_stargate1()">./more_info</button></div>
-  <hr class="line">
-  <h2>S T A R G A T E - Central Computing Cluser[Coming Soon]</h2>
-  <hr class="line">
-  <h2>Fun Projects</h2>
-  <p style="text-align: left;">Zerone Labs X Sciber Tech "Meme-Gallery Project" is currently unavailable due to some technical issues  :(...</p>
-  <div style="display: flex; justify-content: center;">
-    <button class="button-86" style="margin: 40px 20px;" onclick="redirect_wagp()">Join Whatsapp Automated MEME Group</button>
-    <button class="button-86" style="margin: 40px 20px;" onclick="redirect_ingrp()">Redirect to the Meme-Gallery Preview</button></div>
-  <hr class="line">
-  <h2>About Founder</h2>
-    <button class="button-86" style="margin: 40px 20px;" onclick="redirect_readme()">README.MD</button>
-  <hr class="line">
-  <h2>About us</h2>
-  <p>Zerone Laboratories and Technologies is a lab that experiments with AI, robotics, and other cutting-edge technology. Our team of experts works collaboratively to develop innovative solutions that have the potential to revolutionize industries and transform the way we live and work. We are committed to pushing the boundaries of technology to create a better future.</p>
-  <hr class="line">
+    <h1> Some stuff I fixed / built...
+    <div class="image-gallery">
+        <a href="fixes/STARGATE.jpg" target="_blank">
+            <img src="fixes/STARGATE.jpg" alt="Image">
+          </a>          
+          <a href="fixes/pc.jpg" target="_blank">
+            <img src="fixes/pc.jpg" alt="Image">
+          </a>
+          <a href="fixes/link.jpg" target="_blank">
+            <img src="fixes/link.jpg" alt="Image">
+          </a>
+          <a href="fixes/ipad&phone.jpg" target="_blank">
+            <img src="fixes/ipad&phone.jpg" alt="Image">
+          </a>
+          <a href="fixes/cc.jpg" target="_blank">
+            <img src="fixes/cc.jpg" alt="Image">
+          </a>
+          <a href="fixes/ztOS.jpg" target="_blank">
+            <img src="fixes/ztOS.jpg" alt="Image">
+          </a>
+                                        
+
+    </div>
   <!-- <h2>C O N N E C T - W I T H - M E</h2>
   <div style="display: flex; justify-content: center;">
     <button class="button_3" style="margin: 40px 20px;" onclick="redirect_wame()">DM ME ON WHATSAPP</button>
